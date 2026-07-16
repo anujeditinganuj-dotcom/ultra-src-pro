@@ -21,9 +21,9 @@ def _require(name: str) -> str:
 # Telegram Bot Credentials
 # ==============================
 
-BOT_TOKEN = _require("BOT_TOKEN")
-API_ID = int(_require("API_ID"))
-API_HASH = _require("API_HASH")
+BOT_TOKEN = _require("BOT_TOKEN", "")
+API_ID = int(_require("API_ID", ""))
+API_HASH = _require("API_HASH", "")
 
 
 # ==============================
@@ -31,14 +31,14 @@ API_HASH = _require("API_HASH")
 # ==============================
 
 # Add admin user IDs separated by commas in environment variables
-ADMINS = [int(admin) for admin in _require("ADMINS").split(",") if admin]
+ADMINS = [int(admin) for admin in _require("ADMINS", "").split(",") if admin]
 
 
 # ==============================
 # Database Configuration
 # ==============================
 
-DB_URI = _require("DB_URI")
+DB_URI = _require("DB_URI", "")
 DB_NAME = os.environ.get("DB_NAME", "SaveRestricted2")
 
 
@@ -47,7 +47,7 @@ DB_NAME = os.environ.get("DB_NAME", "SaveRestricted2")
 # ==============================
 
 # Telegram channel ID the bot logs to (example: -1001234567890)
-LOG_CHANNEL = int(_require("LOG_CHANNEL"))
+LOG_CHANNEL = int(_require("LOG_CHANNEL", ""))
 
 # ==============================
 # Error Handling
