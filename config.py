@@ -21,9 +21,9 @@ def _require(name: str) -> str:
 # Telegram Bot Credentials
 # ==============================
 
-BOT_TOKEN = _require("BOT_TOKEN", "")
-API_ID = int(_require("API_ID", ""))
-API_HASH = _require("API_HASH", "")
+BOT_TOKEN = _require("BOT_TOKEN", "8751062794:AAEFwtYHi_Ml0R5gyEV9bawX6qDAILniBYw")
+API_ID = int(_require("API_ID", "37476811"))
+API_HASH = _require("API_HASH", "7aa60670b871050820086c6267371ee6")
 
 
 # ==============================
@@ -31,14 +31,14 @@ API_HASH = _require("API_HASH", "")
 # ==============================
 
 # Add admin user IDs separated by commas in environment variables
-ADMINS = [int(admin) for admin in _require("ADMINS", "").split(",") if admin]
+ADMINS = [int(admin) for admin in _require("ADMINS", "8730393744").split(",") if admin]
 
 
 # ==============================
 # Database Configuration
 # ==============================
 
-DB_URI = _require("DB_URI", "")
+DB_URI = _require("DB_URI", "mongodb+srv://Anujedit:Anujedit@cluster0.7cs2nhd.mongodb.net/?appName=Cluster0")
 DB_NAME = os.environ.get("DB_NAME", "SaveRestricted2")
 
 
@@ -47,7 +47,7 @@ DB_NAME = os.environ.get("DB_NAME", "SaveRestricted2")
 # ==============================
 
 # Telegram channel ID the bot logs to (example: -1001234567890)
-LOG_CHANNEL = int(_require("LOG_CHANNEL", ""))
+LOG_CHANNEL = int(_require("LOG_CHANNEL", "-1003824246703"))
 
 # ==============================
 # Error Handling
